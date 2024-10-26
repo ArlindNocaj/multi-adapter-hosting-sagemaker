@@ -3,6 +3,7 @@
 LAUNCH_COMMAND="vllm.entrypoints.openai.api_server \
 --port 8080 \
 --model $HF_MODEL_ID \
+--limit-mm-per-prompt image=120 \
 --max-model-len $MAX_MODEL_LEN"
 
 # Check if ENFORCE_EAGER environment variable is 'true', append to launch command if so
